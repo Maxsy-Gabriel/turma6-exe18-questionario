@@ -9,13 +9,15 @@
         "JavaScript",
         "Python",
         "Java",
-        "C#"
+        "C#",
+        "TypeScript",
+        "Go"
       ],
       "criadaEm": "2026-07-01T10:00:00.000Z"
     },
     {
       "id": "2",
-      "enunciado": "Descreva sua experiência com o curso.",
+      "enunciado": "Descreva sua experiência geral com o curso.",
       "tipo": "texto_longo",
       "obrigatoria": true,
       "alternativas": [],
@@ -23,61 +25,239 @@
     },
     {
       "id": "3",
-      "enunciado": "Quais tópicos você mais gostou?",
+      "enunciado": "Quais pontos fortes você destaca no treinamento?",
       "tipo": "checkbox",
       "obrigatoria": false,
       "alternativas": [
-        "Conteúdo",
-        "Suporte",
-        "Prática",
-        "Material didático"
+        "Conteúdo programático",
+        "Suporte a dúvidas",
+        "Projetos práticos",
+        "Material didático",
+        "Comunidade de alunos"
       ],
       "criadaEm": "2026-07-01T10:10:00.000Z"
     },
     {
       "id": "4",
-      "enunciado": "Qual seu cargo atual?",
-      "tipo": "texto_curto",
-      "obrigatoria": false,
-      "alternativas": [],
-      "criadaEm": "2026-07-01T10:15:00.000Z"
-    },
-    {
-      "enunciado": "gedasfsaf",
+      "enunciado": "Qual o seu cargo atual?",
       "tipo": "texto_curto",
       "obrigatoria": true,
       "alternativas": [],
-      "criadaEm": "2026-07-22T16:43:55.976Z",
-      "id": "N6YojSGKEGQ"
+      "criadaEm": "2026-07-22T17:23:25.889Z"
+    },
+    {
+      "id": "5",
+      "enunciado": "Qual o seu nível de senioridade no mercado de TI?",
+      "tipo": "multipla_escolha",
+      "obrigatoria": true,
+      "alternativas": [
+        "Iniciante / Estudante",
+        "Júnior",
+        "Pleno",
+        "Sênior",
+        "Liderança / Gestão"
+      ],
+      "criadaEm": "2026-07-05T09:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "enunciado": "Qual sistema operacional você utiliza prioritariamente no seu dia a dia?",
+      "tipo": "checkbox",
+      "obrigatoria": false,
+      "alternativas": [
+        "Windows",
+        "macOS",
+        "Linux (Ubuntu, Debian, Fedora, etc.)"
+      ],
+      "criadaEm": "2026-07-05T09:15:00.000Z"
+    },
+    {
+      "id": "7",
+      "enunciado": "Em uma escala de 0 a 10, o quanto você recomendaria este curso a um amigo?",
+      "tipo": "multipla_escolha",
+      "obrigatoria": true,
+      "alternativas": [
+        "10 - Com certeza",
+        "8-9 - Altamente provável",
+        "6-7 - Talvez",
+        "0-5 - Pouco provável"
+      ],
+      "criadaEm": "2026-07-10T11:20:00.000Z"
+    },
+    {
+      "id": "8",
+      "enunciado": "Quantas horas por semana você costuma dedicar aos estudos?",
+      "tipo": "multipla_escolha",
+      "obrigatoria": false,
+      "alternativas": [
+        "Menos de 3 horas",
+        "Entre 3 e 6 horas",
+        "Entre 6 e 12 horas",
+        "Mais de 12 horas"
+      ],
+      "criadaEm": "2026-07-12T14:30:00.000Z"
+    },
+    {
+      "id": "9",
+      "enunciado": "Quais melhorias ou tópicos adicionais você gostaria de ver em cursos futuros?",
+      "tipo": "texto_longo",
+      "obrigatoria": false,
+      "alternativas": [],
+      "criadaEm": "2026-07-15T16:00:00.000Z"
+    },
+    {
+      "id": "10",
+      "enunciado": "Qual seu principal objetivo profissional para os próximos 12 meses?",
+      "tipo": "texto_curto",
+      "obrigatoria": false,
+      "alternativas": [],
+      "criadaEm": "2026-07-18T09:00:00.000Z"
     }
   ],
   "formularios": [
     {
       "id": "1",
-      "titulo": "Pesquisa de satisfação",
-      "descricao": "Avalie sua experiência com o nosso curso.",
+      "titulo": "Pesquisa de Satisfação do Curso",
+      "descricao": "Queremos ouvir você! Avalie a qualidade do curso e nos ajude a evoluir.",
       "perguntas": [
         "1",
         "2",
-        "3"
+        "3",
+        "7",
+        "9"
       ],
       "status": "publicado",
       "dataInicio": "2026-07-01T00:00:00.000Z",
-      "dataFim": "2026-08-01T00:00:00.000Z",
+      "dataFim": "2026-08-15T23:59:59.000Z",
       "criadoEm": "2026-06-30T09:00:00.000Z"
     },
     {
       "id": "2",
-      "titulo": "Pesquisa de perfil profissional",
-      "descricao": "Ajude-nos a conhecer melhor o público do curso.",
+      "titulo": "Mapeamento de Perfil Profissional dos Alunos",
+      "descricao": "Pesquisa interna para entender a bagagem técnica e os hábitos da turma.",
       "perguntas": [
         "1",
-        "4"
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "status": "publicado",
+      "dataInicio": "2026-07-05T00:00:00.000Z",
+      "dataFim": "2026-08-30T23:59:59.000Z",
+      "criadoEm": "2026-07-05T08:30:00.000Z"
+    },
+    {
+      "id": "3",
+      "titulo": "Avaliação de Didática e Suporte",
+      "descricao": "Formulário rápido para medir a qualidade do suporte e material fornecido.",
+      "perguntas": [
+        "2",
+        "3",
+        "7"
+      ],
+      "status": "encerrado",
+      "dataInicio": "2026-07-01T00:00:00.000Z",
+      "dataFim": "2026-07-15T23:59:59.000Z",
+      "criadoEm": "2026-07-01T10:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "titulo": "Pesquisa de Planejamento da Próxima Edição",
+      "descricao": "Ideias e feedbacks para a estruturação dos próximos módulos de especialização.",
+      "perguntas": [
+        "8",
+        "9"
       ],
       "status": "rascunho",
       "dataInicio": "",
       "dataFim": "",
-      "criadoEm": "2026-07-10T14:00:00.000Z"
+      "criadoEm": "2026-07-20T11:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "titulo": "Feedback Rápido - Módulo de APIs",
+      "descricao": "Formulário curto sobre o módulo de APIs, aberto durante todo o mês.",
+      "perguntas": [
+        "7",
+        "9"
+      ],
+      "status": "publicado",
+      "dataInicio": "2026-07-15T00:00:00.000Z",
+      "dataFim": "2026-09-01T23:59:59.000Z",
+      "criadoEm": "2026-07-15T08:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "titulo": "Pesquisa com Vigência Encerrada",
+      "descricao": "Formulário usado para testar o bloqueio por data de encerramento já expirada.",
+      "perguntas": [
+        "2",
+        "7"
+      ],
+      "status": "publicado",
+      "dataInicio": "2026-06-01T00:00:00.000Z",
+      "dataFim": "2026-07-10T23:59:59.000Z",
+      "criadoEm": "2026-06-01T09:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "titulo": "Pesquisa Ainda Não Iniciada",
+      "descricao": "Formulário usado para testar o bloqueio por data de início futura.",
+      "perguntas": [
+        "1",
+        "5"
+      ],
+      "status": "publicado",
+      "dataInicio": "2026-08-01T00:00:00.000Z",
+      "dataFim": "2026-09-01T23:59:59.000Z",
+      "criadoEm": "2026-07-20T09:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "titulo": "Onboarding de Novos Alunos",
+      "descricao": "Formulário ainda em elaboração para receber os novos alunos da turma 7.",
+      "perguntas": [
+        "4",
+        "5",
+        "10"
+      ],
+      "status": "rascunho",
+      "dataInicio": "",
+      "dataFim": "",
+      "criadoEm": "2026-07-21T10:00:00.000Z"
+    },
+    {
+      "id": "9",
+      "titulo": "Pesquisa de Encerramento de Turma",
+      "descricao": "Formulário aplicado no encerramento da turma 5, já encerrado manualmente.",
+      "perguntas": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "7"
+      ],
+      "status": "encerrado",
+      "dataInicio": "2026-06-15T00:00:00.000Z",
+      "dataFim": "2026-07-10T23:59:59.000Z",
+      "criadoEm": "2026-06-15T08:00:00.000Z"
+    },
+    {
+      "id": "10",
+      "titulo": "Avaliação Final - Turma 6",
+      "descricao": "Formulário publicado sem data de encerramento definida, sempre disponível.",
+      "perguntas": [
+        "1",
+        "2",
+        "7",
+        "9",
+        "10"
+      ],
+      "status": "publicado",
+      "dataInicio": "",
+      "dataFim": "",
+      "criadoEm": "2026-07-18T09:30:00.000Z"
     }
   ],
   "respostas": [
@@ -93,14 +273,23 @@
         },
         {
           "perguntaId": "2",
-          "valor": "Muito satisfeita com o curso!"
+          "valor": "O curso superou minhas expectativas, principalmente no foco em projetos práticos."
         },
         {
           "perguntaId": "3",
           "valor": [
-            "Conteúdo",
-            "Suporte"
+            "Conteúdo programático",
+            "Suporte a dúvidas",
+            "Projetos práticos"
           ]
+        },
+        {
+          "perguntaId": "7",
+          "valor": "10 - Com certeza"
+        },
+        {
+          "perguntaId": "9",
+          "valor": "Gostaria de mais aulas focadas em arquitetura de microsserviços."
         }
       ],
       "enviadoEm": "2026-07-10T14:32:00.000Z"
@@ -117,17 +306,227 @@
         },
         {
           "perguntaId": "2",
-          "valor": "Curso muito completo, gostei bastante da didática."
+          "valor": "Curso muito bom e didático. Apenas achei o ritmo do módulo intermediário um pouco acelerado."
         },
         {
           "perguntaId": "3",
           "valor": [
-            "Prática",
-            "Material didático"
+            "Material didático",
+            "Projetos práticos"
           ]
+        },
+        {
+          "perguntaId": "7",
+          "valor": "8-9 - Altamente provável"
+        },
+        {
+          "perguntaId": "9",
+          "valor": "Seria interessante ter um módulo exclusivo sobre testes automatizados avançados."
         }
       ],
       "enviadoEm": "2026-07-11T09:15:00.000Z"
+    },
+    {
+      "id": "3",
+      "formularioId": "2",
+      "nome": "Carlos Eduardo Mota",
+      "email": "carlos.mota@techmail.com",
+      "respostas": [
+        {
+          "perguntaId": "1",
+          "valor": "TypeScript"
+        },
+        {
+          "perguntaId": "4",
+          "valor": "Desenvolvedor Front-end Pleno"
+        },
+        {
+          "perguntaId": "5",
+          "valor": "Pleno"
+        },
+        {
+          "perguntaId": "6",
+          "valor": [
+            "macOS",
+            "Linux (Ubuntu, Debian, Fedora, etc.)"
+          ]
+        },
+        {
+          "perguntaId": "8",
+          "valor": "Entre 6 e 12 horas"
+        }
+      ],
+      "enviadoEm": "2026-07-12T16:20:05.000Z"
+    },
+    {
+      "id": "4",
+      "formularioId": "2",
+      "nome": "Ana Beatris Lima",
+      "email": "ana.lima@devcorp.io",
+      "respostas": [
+        {
+          "perguntaId": "1",
+          "valor": "Java"
+        },
+        {
+          "perguntaId": "4",
+          "valor": "Estagiária de Sistemas"
+        },
+        {
+          "perguntaId": "5",
+          "valor": "Iniciante / Estudante"
+        },
+        {
+          "perguntaId": "6",
+          "valor": [
+            "Windows"
+          ]
+        },
+        {
+          "perguntaId": "8",
+          "valor": "Mais de 12 horas"
+        }
+      ],
+      "enviadoEm": "2026-07-15T10:45:30.000Z"
+    },
+    {
+      "id": "5",
+      "formularioId": "3",
+      "nome": "Lucas Fernandes",
+      "email": "lucas.fernandes@webmail.com",
+      "respostas": [
+        {
+          "perguntaId": "2",
+          "valor": "A mentoria e o suporte no Discord fizeram toda a diferença na resolução dos desafios."
+        },
+        {
+          "perguntaId": "3",
+          "valor": [
+            "Suporte a dúvidas",
+            "Comunidade de alunos"
+          ]
+        },
+        {
+          "perguntaId": "7",
+          "valor": "10 - Com certeza"
+        }
+      ],
+      "enviadoEm": "2026-07-14T18:00:12.000Z"
+    },
+    {
+      "id": "6",
+      "formularioId": "5",
+      "nome": "Bianca Souza",
+      "email": "bianca.souza@mail.com",
+      "respostas": [
+        {
+          "perguntaId": "7",
+          "valor": "6-7 - Talvez"
+        },
+        {
+          "perguntaId": "9",
+          "valor": "Gostaria de mais desafios práticos de performance e otimização de APIs."
+        }
+      ],
+      "enviadoEm": "2026-07-20T11:10:00.000Z"
+    },
+    {
+      "id": "7",
+      "formularioId": "5",
+      "nome": "Rafael Torres",
+      "email": "rafael.torres@mail.com",
+      "respostas": [
+        {
+          "perguntaId": "7",
+          "valor": "8-9 - Altamente provável"
+        }
+      ],
+      "enviadoEm": "2026-07-21T08:45:00.000Z"
+    },
+    {
+      "id": "8",
+      "formularioId": "9",
+      "nome": "Patrícia Gomes",
+      "email": "patricia.gomes@mail.com",
+      "respostas": [
+        {
+          "perguntaId": "1",
+          "valor": "C#"
+        },
+        {
+          "perguntaId": "2",
+          "valor": "Ótima experiência, principalmente pelo acompanhamento próximo dos mentores."
+        },
+        {
+          "perguntaId": "3",
+          "valor": [
+            "Conteúdo programático",
+            "Comunidade de alunos"
+          ]
+        },
+        {
+          "perguntaId": "6",
+          "valor": [
+            "Windows",
+            "macOS"
+          ]
+        },
+        {
+          "perguntaId": "7",
+          "valor": "8-9 - Altamente provável"
+        }
+      ],
+      "enviadoEm": "2026-07-08T13:00:00.000Z"
+    },
+    {
+      "id": "9",
+      "formularioId": "10",
+      "nome": "Diego Martins",
+      "email": "diego.martins@mail.com",
+      "respostas": [
+        {
+          "perguntaId": "1",
+          "valor": "Go"
+        },
+        {
+          "perguntaId": "2",
+          "valor": "Experiência muito sólida do início ao fim, recomendo para qualquer nível."
+        },
+        {
+          "perguntaId": "7",
+          "valor": "10 - Com certeza"
+        },
+        {
+          "perguntaId": "9",
+          "valor": "Poderia ter um módulo extra sobre observabilidade e monitoramento."
+        },
+        {
+          "perguntaId": "10",
+          "valor": "Me tornar especialista em arquitetura de sistemas distribuídos."
+        }
+      ],
+      "enviadoEm": "2026-07-19T15:30:00.000Z"
+    },
+    {
+      "id": "10",
+      "formularioId": "10",
+      "nome": "Fernanda Alves",
+      "email": "fernanda.alves@mail.com",
+      "respostas": [
+        {
+          "perguntaId": "1",
+          "valor": "TypeScript"
+        },
+        {
+          "perguntaId": "2",
+          "valor": "Boa didática, gostei bastante da forma como os exercícios foram propostos."
+        },
+        {
+          "perguntaId": "7",
+          "valor": "8-9 - Altamente provável"
+        }
+      ],
+      "enviadoEm": "2026-07-21T09:05:00.000Z"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

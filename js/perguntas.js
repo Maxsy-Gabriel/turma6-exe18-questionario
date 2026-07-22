@@ -182,6 +182,12 @@ formPergunta.addEventListener('submit', async function (evento) {
         return;
     }
 
+    let tiposValidos = ['multipla_escolha', 'texto_curto', 'texto_longo', 'checkbox'];
+    if (!tiposValidos.includes(tipo)) {
+        mensagemErro.textContent = 'Selecione um tipo de pergunta válido.';
+        return;
+    }
+
     let erroAlternativas = validarAlternativas(tipo, alternativas);
     if (erroAlternativas) {
         mensagemErro.textContent = erroAlternativas;
