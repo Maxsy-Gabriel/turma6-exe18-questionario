@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cadastro de Questionários</title>
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <h1>Questionários</h1>
+    <nav class="tabs">
+      <a class="tab-btn active" href="/pages/perguntas.html">Perguntas</a>
+      <a class="tab-btn" href="/pages/formularios.html">Formulários</a>
+      <a class="tab-btn" href="/pages/responder.html">Responder</a>
+      <a class="tab-btn" href="/pages/respostas.html">Respostas</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PÁGINA: PERGUNTAS ===================== -->
+    <section id="page-perguntas" class="page active">
+      <h2>Cadastro de Perguntas</h2>
+
+      <form id="form-pergunta" class="card form-card">
+        <input type="hidden" id="pergunta-id">
+
+        <label for="pergunta-enunciado">Enunciado</label>
+        <input type="text" id="pergunta-enunciado" placeholder="Digite o enunciado da pergunta" required>
+
+        <label for="pergunta-tipo">Tipo</label>
+        <select id="pergunta-tipo" required>
+          <option value="">Selecione um tipo</option>
+          <option value="multipla_escolha">Múltipla escolha</option>
+          <option value="texto_curto">Texto curto</option>
+          <option value="texto_longo">Texto longo</option>
+          <option value="checkbox">Checkbox</option>
+        </select>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="pergunta-obrigatoria">
+          Pergunta obrigatória
+        </label>
+
+        <p id="pergunta-tipo-info" class="mensagem-info"></p>
+
+        <div id="pergunta-alternativas-wrapper" class="alternativas-wrapper">
+          <label>Alternativas (somente múltipla escolha / checkbox)</label>
+          <div id="lista-alternativas" class="lista-alternativas">
+            <div class="alternativa-item">
+              <input type="text" class="alternativa-input" placeholder="Texto da alternativa">
+              <button type="button" class="btn btn-danger btn-remover-alternativa">Remover</button>
+            </div>
+          </div>
+          <button type="button" id="btn-add-alternativa" class="btn btn-secondary">+ Adicionar alternativa</button>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Salvar pergunta</button>
+          <button type="button" id="btn-cancelar-pergunta" class="btn btn-secondary">Cancelar edição</button>
+        </div>
+        <p id="pergunta-erro" class="mensagem-erro"></p>
+      </form>
+
+      <h3>Perguntas cadastradas</h3>
+      <div id="lista-perguntas" class="cards-grid">
+
+        <article class="card pergunta-card" data-id="1">
+          <div class="card-header">
+            <span class="badge badge-tipo">Múltipla escolha</span>
+            <span class="badge badge-obrigatoria">Obrigatória</span>
+          </div>
+          <p class="pergunta-enunciado">Qual sua linguagem de programação favorita?</p>
+          <ul class="chips-list">
+            <li class="chip">JavaScript</li>
+            <li class="chip">Python</li>
+            <li class="chip">Java</li>
+            <li class="chip">C#</li>
+          </ul>
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-editar-pergunta">Editar</button>
+            <button class="btn btn-danger btn-excluir-pergunta">Excluir</button>
+          </div>
+        </article>
+
+        <article class="card pergunta-card" data-id="2">
+          <div class="card-header">
+            <span class="badge badge-tipo">Texto longo</span>
+            <span class="badge badge-obrigatoria">Obrigatória</span>
+          </div>
+          <p class="pergunta-enunciado">Descreva sua experiência com o curso.</p>
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-editar-pergunta">Editar</button>
+            <button class="btn btn-danger btn-excluir-pergunta">Excluir</button>
+          </div>
+        </article>
+
+        <article class="card pergunta-card" data-id="3">
+          <div class="card-header">
+            <span class="badge badge-tipo">Checkbox</span>
+            <span class="badge badge-opcional">Opcional</span>
+          </div>
+          <p class="pergunta-enunciado">Quais tópicos você mais gostou?</p>
+          <ul class="chips-list">
+            <li class="chip">Conteúdo</li>
+            <li class="chip">Suporte</li>
+            <li class="chip">Prática</li>
+            <li class="chip">Material didático</li>
+          </ul>
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-editar-pergunta">Editar</button>
+            <button class="btn btn-danger btn-excluir-pergunta">Excluir</button>
+          </div>
+        </article>
+
+        <article class="card pergunta-card" data-id="4">
+          <div class="card-header">
+            <span class="badge badge-tipo">Texto curto</span>
+            <span class="badge badge-opcional">Opcional</span>
+          </div>
+          <p class="pergunta-enunciado">Qual seu cargo atual?</p>
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-editar-pergunta">Editar</button>
+            <button class="btn btn-danger btn-excluir-pergunta">Excluir</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/js/perguntas.js"></script>
+</body>
+
+</html>

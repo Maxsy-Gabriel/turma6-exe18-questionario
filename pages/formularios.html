@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cadastro de Questionários</title>
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Questionários</h1>
+    <nav class="tabs">
+      <a class="tab-btn" href="/pages/perguntas.html">Perguntas</a>
+      <a class="tab-btn active" href="/pages/formularios.html">Formulários</a>
+      <a class="tab-btn" href="/pages/responder.html">Responder</a>
+      <a class="tab-btn" href="/pages/respostas.html">Respostas</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PÁGINA: FORMULÁRIOS ===================== -->
+    <section id="page-formularios" class="page active">
+      <h2>Cadastro de Formulários</h2>
+
+      <form id="form-formulario" class="card form-card">
+        <input type="hidden" id="formulario-id">
+
+        <label for="formulario-titulo">Título</label>
+        <input type="text" id="formulario-titulo" placeholder="Título do formulário" required>
+
+        <label for="formulario-descricao">Descrição</label>
+        <textarea id="formulario-descricao" placeholder="Descrição (opcional)"></textarea>
+
+        <label for="formulario-status">Status</label>
+        <select id="formulario-status">
+          <option value="rascunho">Rascunho</option>
+          <option value="publicado">Publicado</option>
+          <option value="encerrado">Encerrado</option>
+        </select>
+
+        <div class="grid-2">
+          <div>
+            <label for="formulario-data-inicio">Data início</label>
+            <input type="date" id="formulario-data-inicio">
+          </div>
+          <div>
+            <label for="formulario-data-fim">Data fim</label>
+            <input type="date" id="formulario-data-fim">
+          </div>
+        </div>
+
+        <label>Perguntas do formulário</label>
+        <div id="lista-perguntas-checkbox" class="lista-perguntas-checkbox">
+          <label class="checkbox-label">
+            <input type="checkbox" class="formulario-pergunta-checkbox" value="1" checked>
+            Qual sua linguagem de programação favorita? (Múltipla escolha)
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" class="formulario-pergunta-checkbox" value="2" checked>
+            Descreva sua experiência com o curso. (Texto longo)
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" class="formulario-pergunta-checkbox" value="3" checked>
+            Quais tópicos você mais gostou? (Checkbox)
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" class="formulario-pergunta-checkbox" value="4">
+            Qual seu cargo atual? (Texto curto)
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Salvar formulário</button>
+          <button type="button" id="btn-cancelar-formulario" class="btn btn-secondary">Cancelar edição</button>
+        </div>
+        <p id="formulario-erro" class="mensagem-erro"></p>
+      </form>
+
+      <h3>Formulários cadastrados</h3>
+      <div id="lista-formularios" class="cards-grid">
+
+        <article class="card formulario-card" data-id="1">
+          <div class="card-header">
+            <span class="badge badge-status badge-publicado">Publicado</span>
+            <span class="formulario-periodo">01/07/2026 a 01/08/2026</span>
+          </div>
+          <h4 class="formulario-titulo">Pesquisa de satisfação</h4>
+          <p class="formulario-descricao">Avalie sua experiência com o nosso curso.</p>
+          <p class="formulario-qtd-perguntas">3 perguntas</p>
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-editar-formulario">Editar</button>
+            <button class="btn btn-secondary btn-ver-respostas">Ver respostas</button>
+            <button class="btn btn-warning btn-encerrar-formulario">Encerrar</button>
+          </div>
+        </article>
+
+        <article class="card formulario-card" data-id="2">
+          <div class="card-header">
+            <span class="badge badge-status badge-rascunho">Rascunho</span>
+            <span class="formulario-periodo">Sem período definido</span>
+          </div>
+          <h4 class="formulario-titulo">Pesquisa de perfil profissional</h4>
+          <p class="formulario-descricao">Ajude-nos a conhecer melhor o público do curso.</p>
+          <p class="formulario-qtd-perguntas">2 perguntas</p>
+          <div class="card-actions">
+            <button class="btn btn-secondary btn-editar-formulario">Editar</button>
+            <button class="btn btn-secondary btn-ver-respostas">Ver respostas</button>
+            <button class="btn btn-warning btn-encerrar-formulario">Encerrar</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/js/formularios.js"></script>
+</body>
+</html>

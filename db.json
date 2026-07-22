@@ -1,0 +1,134 @@
+{
+  "perguntas": [
+    {
+      "id": "1",
+      "enunciado": "Qual sua linguagem de programação favorita?",
+      "tipo": "multipla_escolha",
+      "obrigatoria": true,
+      "alternativas": [
+        "JavaScript",
+        "Python",
+        "Java",
+        "C#"
+      ],
+      "criadaEm": "2026-07-01T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "enunciado": "Descreva sua experiência com o curso.",
+      "tipo": "texto_longo",
+      "obrigatoria": true,
+      "alternativas": [],
+      "criadaEm": "2026-07-01T10:05:00.000Z"
+    },
+    {
+      "id": "3",
+      "enunciado": "Quais tópicos você mais gostou?",
+      "tipo": "checkbox",
+      "obrigatoria": false,
+      "alternativas": [
+        "Conteúdo",
+        "Suporte",
+        "Prática",
+        "Material didático"
+      ],
+      "criadaEm": "2026-07-01T10:10:00.000Z"
+    },
+    {
+      "id": "4",
+      "enunciado": "Qual seu cargo atual?",
+      "tipo": "texto_curto",
+      "obrigatoria": false,
+      "alternativas": [],
+      "criadaEm": "2026-07-01T10:15:00.000Z"
+    },
+    {
+      "enunciado": "gedasfsaf",
+      "tipo": "texto_curto",
+      "obrigatoria": true,
+      "alternativas": [],
+      "criadaEm": "2026-07-22T16:43:55.976Z",
+      "id": "N6YojSGKEGQ"
+    }
+  ],
+  "formularios": [
+    {
+      "id": "1",
+      "titulo": "Pesquisa de satisfação",
+      "descricao": "Avalie sua experiência com o nosso curso.",
+      "perguntas": [
+        "1",
+        "2",
+        "3"
+      ],
+      "status": "publicado",
+      "dataInicio": "2026-07-01T00:00:00.000Z",
+      "dataFim": "2026-08-01T00:00:00.000Z",
+      "criadoEm": "2026-06-30T09:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "titulo": "Pesquisa de perfil profissional",
+      "descricao": "Ajude-nos a conhecer melhor o público do curso.",
+      "perguntas": [
+        "1",
+        "4"
+      ],
+      "status": "rascunho",
+      "dataInicio": "",
+      "dataFim": "",
+      "criadoEm": "2026-07-10T14:00:00.000Z"
+    }
+  ],
+  "respostas": [
+    {
+      "id": "1",
+      "formularioId": "1",
+      "nome": "Maria Silva",
+      "email": "maria.silva@email.com",
+      "respostas": [
+        {
+          "perguntaId": "1",
+          "valor": "JavaScript"
+        },
+        {
+          "perguntaId": "2",
+          "valor": "Muito satisfeita com o curso!"
+        },
+        {
+          "perguntaId": "3",
+          "valor": [
+            "Conteúdo",
+            "Suporte"
+          ]
+        }
+      ],
+      "enviadoEm": "2026-07-10T14:32:00.000Z"
+    },
+    {
+      "id": "2",
+      "formularioId": "1",
+      "nome": "João Pereira",
+      "email": "joao.pereira@email.com",
+      "respostas": [
+        {
+          "perguntaId": "1",
+          "valor": "Python"
+        },
+        {
+          "perguntaId": "2",
+          "valor": "Curso muito completo, gostei bastante da didática."
+        },
+        {
+          "perguntaId": "3",
+          "valor": [
+            "Prática",
+            "Material didático"
+          ]
+        }
+      ],
+      "enviadoEm": "2026-07-11T09:15:00.000Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

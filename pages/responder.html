@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cadastro de Questionários</title>
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Questionários</h1>
+    <nav class="tabs">
+      <a class="tab-btn" href="/pages/perguntas.html">Perguntas</a>
+      <a class="tab-btn" href="/pages/formularios.html">Formulários</a>
+      <a class="tab-btn active" href="/pages/responder.html">Responder</a>
+      <a class="tab-btn" href="/pages/respostas.html">Respostas</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PÁGINA: RESPONDER (pública) ===================== -->
+    <section id="page-responder" class="page active">
+      <h2>Responder formulário</h2>
+
+      <div class="card">
+        <label for="select-formulario-responder">Selecione o formulário</label>
+        <select id="select-formulario-responder">
+          <option value="1">Pesquisa de satisfação</option>
+          <option value="2">Pesquisa de perfil profissional</option>
+        </select>
+      </div>
+
+      <form id="form-responder" class="card form-card">
+
+        <div class="formulario-cabecalho">
+          <h3 id="responder-titulo">Pesquisa de satisfação</h3>
+          <p id="responder-descricao">Avalie sua experiência com o nosso curso.</p>
+        </div>
+
+        <label for="respondente-nome">Nome</label>
+        <input type="text" id="respondente-nome" placeholder="Seu nome" required>
+
+        <label for="respondente-email">E-mail</label>
+        <input type="email" id="respondente-email" placeholder="seu@email.com" required>
+
+        <div id="perguntas-responder" class="perguntas-responder">
+
+          <fieldset class="pergunta-resposta-item" data-pergunta-id="1">
+            <legend>Qual sua linguagem de programação favorita? <span class="obrigatoria-marcador">*</span></legend>
+            <label class="radio-label">
+              <input type="radio" name="resposta-pergunta-1" value="JavaScript" checked> JavaScript
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="resposta-pergunta-1" value="Python"> Python
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="resposta-pergunta-1" value="Java"> Java
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="resposta-pergunta-1" value="C#"> C#
+            </label>
+          </fieldset>
+
+          <fieldset class="pergunta-resposta-item" data-pergunta-id="2">
+            <legend>Descreva sua experiência com o curso. <span class="obrigatoria-marcador">*</span></legend>
+            <textarea name="resposta-pergunta-2" placeholder="Escreva sua resposta"></textarea>
+          </fieldset>
+
+          <fieldset class="pergunta-resposta-item" data-pergunta-id="3">
+            <legend>Quais tópicos você mais gostou?</legend>
+            <label class="checkbox-label">
+              <input type="checkbox" name="resposta-pergunta-3" value="Conteúdo" checked> Conteúdo
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="resposta-pergunta-3" value="Suporte" checked> Suporte
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="resposta-pergunta-3" value="Prática"> Prática
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="resposta-pergunta-3" value="Material didático"> Material didático
+            </label>
+          </fieldset>
+
+          <fieldset class="pergunta-resposta-item" data-pergunta-id="4">
+            <legend>Qual seu cargo atual?</legend>
+            <input type="text" name="resposta-pergunta-4" maxlength="200" placeholder="Escreva sua resposta (até 200 caracteres)">
+          </fieldset>
+
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Enviar resposta</button>
+        </div>
+        <p id="responder-erro" class="mensagem-erro"></p>
+        <p id="responder-sucesso" class="mensagem-sucesso"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="/js/responder.js"></script>
+</body>
+</html>
